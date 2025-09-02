@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>南鯤鯓代天府 - 詳細介紹</title>
+  <link href="https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="image/southkunshen/southkunshen_main.webp">
+  <link rel="preload" as="image" href="image/southkunshen/southkunshen_main1.webp">
+  <link rel="preload" as="image" href="image/southkunshen/southkunshen_main2.webp">
+  <link rel="preload" as="image" href="image/southkunshen/southkunshen_main3.webp">
+  <link rel="preload" as="image" href="image/southkunshen/southkunshen_main4.webp">
+  <link rel="preload" as="image" href="image/southkunshen/southkunshen_main5.webp">
+  <link rel="preload" as="image" href="image/southkunshen/southkunshen_main6.webp">
+  <link rel="preload" as="image" href="image/southkunshen/southkunshen_main7.webp">
+  <link rel="preload" as="image" href="image/southkunshen/southkunshen_main8.webp">
+  
+
+  <style>
+
+body {
+    font-family: "LXGW WenKai TC", cursive;
+    background: #fdf5e6;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+    font-size: 18px; 
+    }
+    p, li {
+  font-size: 20px; /* ← 也可以個別設定段落與列表字體大小 */
+}
+
+    header {
+      background-color: #f2c94c;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 1rem;
+      background: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+
+    @media (min-width: 768px) {
+      .container {
+        padding: 2rem 3rem;
+      }
+    }
+
+    .image-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .image-item {
+      text-align: center;
+    }
+
+    .image-item img {
+      width: 80%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      transition: transform 0.3s;
+    }
+
+    .image-item img:hover {
+      transform: scale(1.03);
+    }
+
+    .image-item p {
+      margin-top: 0.5rem;
+      font-size: 1.2rem;
+      color: #555;
+    }
+
+    .main-image {
+      width: 80%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      margin: 1rem 0;
+
+    }
+    h2 {
+      font-size: 1.8rem;
+      margin-top: 2.2rem;
+      color: #5d206e;
+    }
+
+    footer {
+      text-align: center;
+      background: #f2c94c;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+
+    a {
+      color: #0e11e7;
+      text-decoration: none;
+    }
+    
+    a:hover {
+      text-decoration: underline;
+    }
+        .hero {
+  position: relative;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  height: 340px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+}
+
+.hero h2 {
+  width: 100%;
+  height: 100%;
+  font-family: "LXGW WenKai TC", "Noto Sans TC", cursive;
+  font-style: normal;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  background: rgba(0, 0, 0, 0.3); /* 半透明背景加可讀性 */
+  margin: 0; /* 確保無預設間距 */
+  z-index: 3;
+}
+
+.hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; /* 滿版寬度 */
+  height: 100%; /* 高度維持父元素 */
+  background-size: cover; /* 填滿寬度，自動調整比例 */
+  background-position: center; /* 居中對齊 */
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  z-index: 1;
+}
+
+.hero-bg.active {
+  opacity: 1;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; /* 多出50px 蓋到點點區 */ 
+  background: rgba(0, 0, 0, 0.2); /* 可調整透明度 */
+  z-index: 3; /* 要高於背景圖但低於文字與按鈕 */
+  pointer-events: none;
+}
+
+/* 左右切換按鈕 */
+.left-btn,
+.right-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 38px;
+  height: 38px;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 50%;
+  color: white;
+  font-size: 24px;
+  line-height: 38px;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+  z-index: 20;
+  transition: background-color 0.3s ease;
+}
+.left-btn:hover,
+.right-btn:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.left-btn {
+  left: 20px;
+}
+
+.right-btn {
+  right: 20px;
+}
+
+/* 導引點（小圓點） */
+.dots {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  z-index: 3;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  background-color: white;
+  border-radius: 50%;
+  opacity: 0.5;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+.dot.active {
+  opacity: 1;
+}
+
+.hero {
+  height: 600px;
+}
+
+/* Hero 區塊高度：行動裝置 */
+@media (max-width: 768px) {
+  .hero {
+    height: 340px;
+  }
+}
+    .hero-title {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 2.5rem;
+  font-weight: bold;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(1px);
+  margin: 0;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+}
+    h2::before {
+  content: "📌";
+  margin-right: 0.5rem;
+}
+
+/* 景點照片 */
+h2:nth-of-type(1)::before {
+  content: "🖼️";
+}
+
+/* 歷史背景 */
+h2:nth-of-type(2)::before {
+  content: "📜";
+}
+
+/* 建築特色 */
+h2:nth-of-type(3)::before {
+  content: "🏯";
+}
+
+/* 文化活動 */
+h2:nth-of-type(4)::before {
+  content: "🎎";
+}
+
+/* 交通與資訊 */
+h2:nth-of-type(5)::before {
+  content: "🗺️";
+}
+  
+  </style>
+    <!-- 16x16 -->
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/southkunshen16.png">
+  
+    <!-- 32x32 -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/southkunshen32.png">
+
+    <!-- 192x192 -->
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicon/southkunshen192.png">
+
+    <!-- 512x512 (常用於 PWA 或桌面捷徑) -->
+    <link rel="icon" type="image/png" sizes="512x512" href="/favicon/southkunshen512.png">
+
+    <!-- iOS/Android 桌面捷徑 -->
+    <link rel="apple-touch-icon" sizes="192x192" href="/favicon/southkunshen192.png">
+    <link rel="apple-touch-icon" sizes="512x512" href="/favicon/southkunshen512.png">
+</head>
+<body>
+
+<header>
+  <h1>南鯤鯓代天府</h1>
+</header>
+
+</div>
+<div class="hero fade-in-on-scroll" id="hero">
+  <div class="hero-bg" id="hero-bg1"></div>
+  <div class="hero-bg" id="hero-bg2"></div>
+  <div class="hero-title">南鯤鯓代天府風貌</div>
+  <button class="left-btn" aria-label="上一張">&#10094;</button>
+  <button class="right-btn" aria-label="下一張">&#10095;</button>
+  <div class="dots" id="dots"></div>
+  <div class="hero-overlay"></div> <!-- 放最後面 -->
+</div>
+<div class="container">
+
+  <h2>景點照片</h2>
+  
+    <div class="image-item">
+      <img src="image/southkunshen/southkunshen_main1.webp" alt="南鯤鯓代天府正門">
+      <p>南鯤鯓代天府正門</p>
+    </div>
+    
+    
+    <div class="image-row">
+    <div class="image-item">
+      <img src="image/southkunshen/southkunshen_main4.webp" alt="慶成閣">
+      <p>慶成閣</p>
+    </div>
+    <div class="image-item">
+      <img src="image/southkunshen/southkunshen_main2.webp" alt="南鯤鯓代天府紀念碑">
+      <p>南鯤鯓代天府紀念碑</p>
+    </div>
+  </div>
+
+  <h2>歷史背景</h2>
+  <p>
+    南鯤鯓代天府位於台南北門區，是台灣五大王廟之一，主祀五府千歲。建於明永曆年間，已有三百年以上歷史，相傳福建移民為求平安渡海來台，遂奉迎王爺神像安座於此，成為台灣最早奉祀王爺信仰的廟宇之一。
+  </p>
+
+  <h2>建築特色</h2>
+  <p>
+    廟宇格局宏偉，融合閩南與巴洛克風格，擁有精緻的交趾陶與剪粘裝飾，殿內雕樑畫棟，金碧輝煌，為台灣宗教建築的重要代表。屋脊上的雙龍搶珠與龍柱皆極具觀賞價值。
+  </p>
+
+  <h2>文化活動</h2>
+  <p>
+    每年農曆四月舉行王船祭典，為期一週，吸引大批信徒與遊客參與。儀式包括請王、建醮、遶境、焚燒王船等，展現深厚的民間信仰與傳統藝術。
+  </p>
+
+  <div class="image-item">
+  <img src="image/southkunshen/southkunshen_main3.webp" alt="南鯤鯓代天府遶境活動" class="main-image">
+  <p>南鯤鯓代天府五府千歲進香期5/17</p>
+  </div>
+
+  <h2>交通與資訊</h2>
+  <ul>
+    <li><b>地址：</b>台南市北門區鯤江里976號(<a href="https://maps.app.goo.gl/bUG2rPkmF1JKvv7FA" target="_blank">Google地圖</a>)</li>
+    <li><b>開放時間：</b>每日 6:00 - 21:00</li>
+    <li><b>聯絡電話：</b>06-786-3711</li>
+  </ul>
+
+</div>
+
+<footer>
+  回到 <a href="index.html">北門導覽首頁</a>
+</footer>
+<script>
+    function isTouchDevice() {
+      return window.matchMedia("(pointer: coarse)").matches;
+    }
+
+    const bg1 = document.getElementById("hero-bg1");
+    const bg2 = document.getElementById("hero-bg2");
+    const hero = document.getElementById("hero");
+    const dotsContainer = document.getElementById("dots");
+    const leftBtn = document.querySelector(".left-btn");
+    const rightBtn = document.querySelector(".right-btn");
+
+    const heroImages = [
+      "image/southkunshen/southkunshen_main.webp",
+      "image/southkunshen/southkunshen_main1.webp",
+      "image/southkunshen/southkunshen_main2.webp",
+      "image/southkunshen/southkunshen_main3.webp",
+      "image/southkunshen/southkunshen_main4.webp",
+      "image/southkunshen/southkunshen_main5.webp",
+      "image/southkunshen/southkunshen_main6.webp",
+      "image/southkunshen/southkunshen_main7.webp",
+      "image/southkunshen/southkunshen_main8.webp"
+    ];
+
+    let currentIndex = 0;
+    let isBg1OnTop = true;
+    let isAnimating = false;
+    const animationDuration = 400;
+    let autoPlayTimer = null;
+    const autoPlayDelay = 4000;
+
+    // 點點產生
+    heroImages.forEach((_, i) => {
+      const dot = document.createElement("div");
+      dot.classList.add("dot");
+      if (i === 0) dot.classList.add("active");
+      dot.addEventListener("click", () => {
+        if (i === currentIndex || isAnimating) return;
+        const direction = i > currentIndex ? -1 : 1;
+        stopAutoPlay();
+        switchTo(i, direction);
+        startAutoPlay();
+      });
+      dotsContainer.appendChild(dot);
+    });
+
+    function updateDots(index) {
+      document.querySelectorAll(".dot").forEach((dot, i) => {
+        dot.classList.toggle("active", i === index);
+      });
+    }
+
+    function setBgStyles(el, imgUrl, opacity = 1, transform = "translateX(0)", zIndex = 0) {
+      el.style.backgroundImage = `url(${imgUrl})`;
+      el.style.opacity = opacity;
+      el.style.transform = transform;
+      el.style.zIndex = zIndex;
+      el.style.transition = `opacity ${animationDuration}ms ease, transform ${animationDuration}ms ease`;
+    }
+
+    function getCurrentBg() {
+      return isBg1OnTop ? bg1 : bg2;
+    }
+    function getNextBg() {
+      return isBg1OnTop ? bg2 : bg1;
+    }
+
+    function switchTo(targetIndex, direction = -1) {
+      if (isAnimating || targetIndex === currentIndex) return;
+      isAnimating = true;
+
+      const currentBg = getCurrentBg();
+      const nextBg = getNextBg();
+      const offset = hero.clientWidth;
+
+      const fromX = direction === 1 ? -offset : offset;
+      const toX = direction === 1 ? offset : -offset;
+
+      // 提前設定下一張背景的位置和樣式，準備動畫
+      nextBg.style.transition = "none";
+      nextBg.style.backgroundImage = `url(${heroImages[targetIndex]})`;
+      nextBg.style.opacity = 1;
+      nextBg.style.transform = `translateX(${fromX}px)`;
+      nextBg.style.zIndex = 1;
+
+      requestAnimationFrame(() => {
+        // 啟動動畫
+        currentBg.style.transition = `transform ${animationDuration}ms ease, opacity ${animationDuration}ms ease`;
+        currentBg.style.transform = `translateX(${toX}px)`;
+
+        nextBg.style.transition = `transform ${animationDuration}ms ease, opacity ${animationDuration}ms ease`;
+        nextBg.style.transform = "translateX(0)";
+        nextBg.style.zIndex = 2;
+
+        setTimeout(() => {
+          // 動畫結束後重設狀態
+          isBg1OnTop = !isBg1OnTop;
+          currentIndex = targetIndex;
+          updateDots(currentIndex);
+
+          const oldBg = getNextBg();
+          oldBg.style.transition = "none";
+          oldBg.style.opacity = 0;
+          oldBg.style.transform = `translateX(${fromX}px)`;
+          oldBg.style.zIndex = 0;
+
+          isAnimating = false;
+        }, animationDuration);
+      });
+    }
+
+
+
+    function nextSlide() {
+      switchTo((currentIndex + 1) % heroImages.length, -1);
+    }
+    function prevSlide() {
+      switchTo((currentIndex - 1 + heroImages.length) % heroImages.length, 1);
+    }
+
+    function startAutoPlay() {
+      if (autoPlayTimer) clearInterval(autoPlayTimer);
+      autoPlayTimer = setInterval(() => {
+        if (!isAnimating) nextSlide();
+      }, autoPlayDelay);
+    }
+
+    function stopAutoPlay() {
+      if (autoPlayTimer) {
+        clearInterval(autoPlayTimer);
+        autoPlayTimer = null;
+      }
+    }
+
+    // 👉 手機滑動切換
+    let startX = 0;
+    let deltaX = 0;
+    let isDragging = false;
+    const swipeThreshold = 50;
+
+    hero.addEventListener("pointerdown", (e) => {
+      if (!isTouchDevice() || e.pointerType !== "touch") return;
+      if (isAnimating) return;
+
+      isDragging = true;
+      startX = e.clientX;
+      stopAutoPlay();
+
+      const currentBg = getCurrentBg();
+      const nextBg = getNextBg();
+
+      currentBg.style.transition = "none";
+      nextBg.style.transition = "none";
+      currentBg.style.zIndex = 2;
+      nextBg.style.zIndex = 1;
+      nextBg.style.opacity = 1;
+    });
+
+    hero.addEventListener("pointermove", (e) => {
+      if (!isDragging || !isTouchDevice() || e.pointerType !== "touch") return;
+
+      deltaX = e.clientX - startX;
+      const direction = deltaX > 0 ? -1 : 1;
+      const targetIndex = (currentIndex + direction + heroImages.length) % heroImages.length;
+
+      const currentBg = getCurrentBg();
+      const nextBg = getNextBg();
+
+      nextBg.style.backgroundImage = `url(${heroImages[targetIndex]})`;
+      nextBg.style.transition = "none";
+      nextBg.style.zIndex = 1;
+      nextBg.style.opacity = 1;
+
+      nextBg.style.transform = `translateX(${deltaX + direction * hero.clientWidth}px)`;
+      currentBg.style.transform = `translateX(${deltaX}px)`;
+    });
+
+    hero.addEventListener("pointerup", (e) => {
+      if (!isDragging || !isTouchDevice() || e.pointerType !== "touch") return;
+      isDragging = false;
+
+      if (Math.abs(deltaX) > swipeThreshold) {
+        const direction = deltaX > 0 ? 1 : -1;
+        const targetIndex = (currentIndex - direction + heroImages.length) % heroImages.length;
+        switchTo(targetIndex, direction);
+      } else {
+        // 回彈動畫
+        const currentBg = getCurrentBg();
+        const nextBg = getNextBg();
+        currentBg.style.transition = `transform ${animationDuration}ms ease`;
+        nextBg.style.transition = `transform ${animationDuration}ms ease`;
+        currentBg.style.transform = "translateX(0)";
+        nextBg.style.transform = `${deltaX > 0 ? "translateX(-100%)" : "translateX(100%)"}`;
+      }
+
+      deltaX = 0;
+      startAutoPlay();
+    });
+
+    hero.addEventListener("pointercancel", (e) => {
+      if (!isDragging || !isTouchDevice() || e.pointerType !== "touch") return;
+      isDragging = false;
+
+      const direction = deltaX > 0 ? 1 : -1;
+      const targetIndex = (currentIndex - direction + heroImages.length) % heroImages.length;
+      switchTo(targetIndex, direction);
+
+      deltaX = 0;
+      startAutoPlay();
+    });
+
+    // 桌機左右按鈕
+    leftBtn.addEventListener("click", () => {
+      if (isAnimating) return;
+      stopAutoPlay();
+      prevSlide();
+      startAutoPlay();
+    });
+
+    rightBtn.addEventListener("click", () => {
+      if (isAnimating) return;
+      stopAutoPlay();
+      nextSlide();
+      startAutoPlay();
+    });
+
+    function init() {
+      bg1.style.backgroundImage = `url(${heroImages[0]})`;
+      bg1.style.opacity = 1;
+      bg1.style.transform = "translateX(0)";
+      bg1.style.zIndex = 2;
+
+      // ✅ 重點：初始化 bg2 的 transform 為「下一張滑入前的位置」
+      const offset = hero.clientWidth;
+      bg2.style.backgroundImage = "";
+      bg2.style.opacity = 0;
+      bg2.style.transform = `translateX(${offset}px)`; // 先從右側準備滑入
+      bg2.style.zIndex = 1;
+
+      updateDots(0);
+      // 等第一張 hero 圖片載入完成後再啟動輪播
+      const preloadImage = new Image();
+      preloadImage.src = heroImages[0];
+      preloadImage.onload = () => {
+        setBgStyles(bg1, heroImages[0]);  // 顯示第一張
+        updateDots(0);                    // 更新點點狀態
+        startAutoPlay();                  // ✅ 圖片載完才啟動輪播
+      };
+
+
+      // 手機隱藏按鈕
+      if (isTouchDevice()) {
+        leftBtn.style.display = "none";
+        rightBtn.style.display = "none";
+      }
+    }
+
+    init();
+
+</script>
+</body>
+</html>
+

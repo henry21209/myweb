@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>旅遊沒煩惱!!!你必需知道的在地「冷門」景點</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preload" as="image" href="image/hero.webp">
+    <link rel="preload" as="image" href="image/saltfield.webp">
+    <link rel="preload" as="image" href="image/shuangchun.webp">
+    <link rel="preload" as="image" href="image/crystalchurch.webp">
+    <link rel="preload" as="image" href="image/milkfishkid.webp">
+    <link rel="preload" as="image" href="image/southkunshen.webp">
+    <link rel="preload" as="image" href="image/blackfoot.webp">
+    <!-- 16x16 -->
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/index16.png">
+    
+    <!-- 32x32 -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/index32.png">
+
+    <!-- 192x192 -->
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicon/index192.png">
+
+    <!-- 512x512 (常用於 PWA 或桌面捷徑) -->
+    <link rel="icon" type="image/png" sizes="512x512" href="/favicon/index512.png">
+
+    <!-- iOS/Android 桌面捷徑 -->
+    <link rel="apple-touch-icon" sizes="192x192" href="/favicon/index192.png">
+    <link rel="apple-touch-icon" sizes="512x512" href="/favicon/index512.png">
+        
+  </head>
+  <body>
+    <header class="fade-in-on-scroll">
+      <h1><a href="#">北門秘境導覽</a></h1>
+      <hr />
+      <nav>
+        <a href="#spots">景點導覽</a>
+        <a href="#hotspots">打卡熱點</a>
+        <a href="#map">地圖</a>
+      </nav>
+    </header>
+
+    <div class="hero fade-in-on-scroll" id="hero">
+      <div class="hero-bg" id="hero-bg1"></div>
+      <div class="hero-bg" id="hero-bg2"></div>
+      <h2>走進北門的私房風景</h2>
+      <button class="left-btn" aria-label="上一張">&#10094;</button>
+      <button class="right-btn" aria-label="下一張">&#10095;</button>
+      <div class="dots" id="dots"></div>
+      <div class="hero-overlay"></div> <!-- 放最後面 -->
+    </div>
+
+    <section class="section" id="spots">
+      <h2>文化與自然景點</h2>
+      <div class="card-container">
+        <div class="card kunshen">
+          <div class="card-content">
+            <h3>南鯤鯓代天府</h3>
+            <p>擁有超過300年歷史的廟宇，是信仰中心與建築藝術結合的經典。</p>
+            <a href="southkunshen.html">了解更多</a>
+          </div>
+        </div>
+
+        <div class="card saltfield">
+          <div class="card-content">
+            <h3>井仔腳瓦盤鹽田</h3>
+            <p>夕陽與鹽田交織出的絕美畫面，是攝影迷的天堂。</p>
+            <a href="saltfield.html">了解更多</a>
+          </div>
+        </div>
+
+        <div class="card blackfoot">
+          <div class="card-content">
+            <h3>烏腳病紀念園區</h3>
+            <p>早期公共衛生與醫療歷史的重要據點，見證台灣醫療傳奇。</p>
+            <a href="blackfoot.html">了解更多</a>
+          </div>
+        </div>
+
+        <div class="card shuangchun">
+          <div class="card-content">
+            <h3>雙春濱海遊憩區</h3>
+            <p>結合紅樹林與海灘的濱海生態園區，是親子與露營的熱門地點。</p>
+            <a href="shuangchun.html">了解更多</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="hotspots">
+      <h2>打卡熱點與美食</h2>
+      <div class="card-container">
+        <div class="card church">
+          <div class="card-content">
+            <h3>水晶教堂</h3>
+            <p>夢幻純白水上教堂，打卡必訪浪漫秘境。</p>
+            <a href="#" class="more-btn" data-url="crystalchurch.html">了解更多</a>
+          </div>
+        </div>
+
+        <div class="card milkfishkid">
+          <div class="card-content">
+            <h3>虱目魚小子</h3>
+            <p>可愛又吸睛的虱目魚人偶，絕對是IG熱門拍照點。</p>
+            <a href="#" class="more-btn" data-url="milkfishkid.html">了解更多</a>
+          </div>
+        </div>
+
+        <div class="card foodroad">
+          <div class="card-content">
+            <h3>北門美食街</h3>
+            <p>集合在地小吃與甜品，填飽肚子的好去處。</p>
+            <a href="#" class="more-btn" data-url="foodroad.html">了解更多</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="map">
+      <h2>地圖導覽</h2>
+      <iframe
+        src="https://www.google.com/maps/d/u/0/embed?mid=1_aoGANjZaX5K3-himqGvwmRd9HsA2ZY&ehbc=2E312F&noprof=1"
+        width="100%"
+        height="450"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </section>
+
+    <footer>製作：鄭瑞亨、林郁潔、潘絜雍 ｜ 資料來源：雲嘉南濱海國家風景區</footer>
+
+    <div class="modal" id="dynamic-modal">
+      <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <iframe
+          id="modal-iframe" style="border: none; border-radius: 12px; width: 100%; height: 500px"
+        ></iframe>
+      </div>
+    </div>
+
+    <script>
+    function isTouchDevice() {
+      return window.matchMedia("(pointer: coarse)").matches;
+    }
+
+    const bg1 = document.getElementById("hero-bg1");
+    const bg2 = document.getElementById("hero-bg2");
+    const hero = document.getElementById("hero");
+    const dotsContainer = document.getElementById("dots");
+    const leftBtn = document.querySelector(".left-btn");
+    const rightBtn = document.querySelector(".right-btn");
+
+    const heroImages = [
+      "image/hero.webp",
+      "image/saltfield.webp",
+      "image/shuangchun.webp",
+      "image/crystalchurch.webp",
+      "image/milkfishkid.webp",
+      "image/southkunshen.webp",
+      "image/blackfoot.webp"
+    ];
+
+    let currentIndex = 0;
+    let isBg1OnTop = true;
+    let isAnimating = false;
+    const animationDuration = 400;
+    let autoPlayTimer = null;
+    const autoPlayDelay = 4000;
+
+    // 點點產生
+    heroImages.forEach((_, i) => {
+      const dot = document.createElement("div");
+      dot.classList.add("dot");
+      if (i === 0) dot.classList.add("active");
+      dot.addEventListener("click", () => {
+        if (i === currentIndex || isAnimating) return;
+        const direction = i > currentIndex ? -1 : 1;
+        stopAutoPlay();
+        switchTo(i, direction);
+        startAutoPlay();
+      });
+      dotsContainer.appendChild(dot);
+    });
+
+    function updateDots(index) {
+      document.querySelectorAll(".dot").forEach((dot, i) => {
+        dot.classList.toggle("active", i === index);
+      });
+    }
+
+    function setBgStyles(el, imgUrl, opacity = 1, transform = "translateX(0)", zIndex = 0) {
+      el.style.backgroundImage = `url(${imgUrl})`;
+      el.style.opacity = opacity;
+      el.style.transform = transform;
+      el.style.zIndex = zIndex;
+      el.style.transition = `opacity ${animationDuration}ms ease, transform ${animationDuration}ms ease`;
+    }
+
+    function getCurrentBg() {
+      return isBg1OnTop ? bg1 : bg2;
+    }
+    function getNextBg() {
+      return isBg1OnTop ? bg2 : bg1;
+    }
+
+    function switchTo(targetIndex, direction = -1) {
+      if (isAnimating || targetIndex === currentIndex) return;
+      isAnimating = true;
+
+      const currentBg = getCurrentBg();
+      const nextBg = getNextBg();
+      const offset = hero.clientWidth;
+
+      const fromX = direction === 1 ? -offset : offset;
+      const toX = direction === 1 ? offset : -offset;
+
+      // 提前設定下一張背景的位置和樣式，準備動畫
+      nextBg.style.transition = "none";
+      nextBg.style.backgroundImage = `url(${heroImages[targetIndex]})`;
+      nextBg.style.opacity = 1;
+      nextBg.style.transform = `translateX(${fromX}px)`;
+      nextBg.style.zIndex = 1;
+
+      requestAnimationFrame(() => {
+        // 啟動動畫
+        currentBg.style.transition = `transform ${animationDuration}ms ease, opacity ${animationDuration}ms ease`;
+        currentBg.style.transform = `translateX(${toX}px)`;
+
+        nextBg.style.transition = `transform ${animationDuration}ms ease, opacity ${animationDuration}ms ease`;
+        nextBg.style.transform = "translateX(0)";
+        nextBg.style.zIndex = 2;
+
+        setTimeout(() => {
+          // 動畫結束後重設狀態
+          isBg1OnTop = !isBg1OnTop;
+          currentIndex = targetIndex;
+          updateDots(currentIndex);
+
+          const oldBg = getNextBg();
+          oldBg.style.transition = "none";
+          oldBg.style.opacity = 0;
+          oldBg.style.transform = `translateX(${fromX}px)`;
+          oldBg.style.zIndex = 0;
+
+          isAnimating = false;
+        }, animationDuration);
+      });
+    }
+
+
+
+    function nextSlide() {
+      switchTo((currentIndex + 1) % heroImages.length, -1);
+    }
+    function prevSlide() {
+      switchTo((currentIndex - 1 + heroImages.length) % heroImages.length, 1);
+    }
+
+    function startAutoPlay() {
+      if (autoPlayTimer) clearInterval(autoPlayTimer);
+      autoPlayTimer = setInterval(() => {
+        if (!isAnimating) nextSlide();
+      }, autoPlayDelay);
+    }
+
+    function stopAutoPlay() {
+      if (autoPlayTimer) {
+        clearInterval(autoPlayTimer);
+        autoPlayTimer = null;
+      }
+    }
+
+    // 👉 手機滑動切換
+    let startX = 0;
+    let deltaX = 0;
+    let isDragging = false;
+    const swipeThreshold = 50;
+
+    hero.addEventListener("pointerdown", (e) => {
+      if (!isTouchDevice() || e.pointerType !== "touch") return;
+      if (isAnimating) return;
+
+      isDragging = true;
+      startX = e.clientX;
+      stopAutoPlay();
+
+      const currentBg = getCurrentBg();
+      const nextBg = getNextBg();
+
+      currentBg.style.transition = "none";
+      nextBg.style.transition = "none";
+      currentBg.style.zIndex = 2;
+      nextBg.style.zIndex = 1;
+      nextBg.style.opacity = 1;
+    });
+
+    hero.addEventListener("pointermove", (e) => {
+      if (!isDragging || !isTouchDevice() || e.pointerType !== "touch") return;
+
+      deltaX = e.clientX - startX;
+      const direction = deltaX > 0 ? -1 : 1;
+      const targetIndex = (currentIndex + direction + heroImages.length) % heroImages.length;
+
+      const currentBg = getCurrentBg();
+      const nextBg = getNextBg();
+
+      nextBg.style.backgroundImage = `url(${heroImages[targetIndex]})`;
+      nextBg.style.transition = "none";
+      nextBg.style.zIndex = 1;
+      nextBg.style.opacity = 1;
+
+      nextBg.style.transform = `translateX(${deltaX + direction * hero.clientWidth}px)`;
+      currentBg.style.transform = `translateX(${deltaX}px)`;
+    });
+
+    hero.addEventListener("pointerup", (e) => {
+      if (!isDragging || !isTouchDevice() || e.pointerType !== "touch") return;
+      isDragging = false;
+
+      if (Math.abs(deltaX) > swipeThreshold) {
+        const direction = deltaX > 0 ? 1 : -1;
+        const targetIndex = (currentIndex - direction + heroImages.length) % heroImages.length;
+        switchTo(targetIndex, direction);
+      } else {
+        // 回彈動畫
+        const currentBg = getCurrentBg();
+        const nextBg = getNextBg();
+        currentBg.style.transition = `transform ${animationDuration}ms ease`;
+        nextBg.style.transition = `transform ${animationDuration}ms ease`;
+        currentBg.style.transform = "translateX(0)";
+        nextBg.style.transform = `${deltaX > 0 ? "translateX(-100%)" : "translateX(100%)"}`;
+      }
+
+      deltaX = 0;
+      startAutoPlay();
+    });
+
+    hero.addEventListener("pointercancel", (e) => {
+      if (!isDragging || !isTouchDevice() || e.pointerType !== "touch") return;
+      isDragging = false;
+
+      const direction = deltaX > 0 ? 1 : -1;
+      const targetIndex = (currentIndex - direction + heroImages.length) % heroImages.length;
+      switchTo(targetIndex, direction);
+
+      deltaX = 0;
+      startAutoPlay();
+    });
+
+    // 桌機左右按鈕
+    leftBtn.addEventListener("click", () => {
+      if (isAnimating) return;
+      stopAutoPlay();
+      prevSlide();
+      startAutoPlay();
+    });
+
+    rightBtn.addEventListener("click", () => {
+      if (isAnimating) return;
+      stopAutoPlay();
+      nextSlide();
+      startAutoPlay();
+    });
+
+    function init() {
+      bg1.style.backgroundImage = `url(${heroImages[0]})`;
+      bg1.style.opacity = 1;
+      bg1.style.transform = "translateX(0)";
+      bg1.style.zIndex = 2;
+
+      // ✅ 重點：初始化 bg2 的 transform 為「下一張滑入前的位置」
+      const offset = hero.clientWidth;
+      bg2.style.backgroundImage = "";
+      bg2.style.opacity = 0;
+      bg2.style.transform = `translateX(${offset}px)`; // 先從右側準備滑入
+      bg2.style.zIndex = 1;
+
+      updateDots(0);
+      // 等第一張 hero 圖片載入完成後再啟動輪播
+      const preloadImage = new Image();
+      preloadImage.src = heroImages[0];
+      preloadImage.onload = () => {
+        setBgStyles(bg1, heroImages[0]);  // 顯示第一張
+        updateDots(0);                    // 更新點點狀態
+        startAutoPlay();                  // ✅ 圖片載完才啟動輪播
+      };
+
+
+      // 手機隱藏按鈕
+      if (isTouchDevice()) {
+        leftBtn.style.display = "none";
+        rightBtn.style.display = "none";
+      }
+    }
+
+    init();
+
+    // Modal 功能保留
+    document.querySelectorAll(".more-btn").forEach((btn) => {
+      btn.addEventListener("click", function (e) {
+        e.preventDefault();
+        const url = this.getAttribute("data-url");
+        const iframe = document.getElementById("modal-iframe");
+        iframe.src = url;
+        document.getElementById("dynamic-modal").style.display = "flex";
+      });
+    });
+
+    document.querySelector(".close-btn").addEventListener("click", function () {
+      const modal = document.getElementById("dynamic-modal");
+      modal.style.display = "none";
+      document.getElementById("modal-iframe").src = "";
+    });
+
+    document.getElementById("dynamic-modal").addEventListener("click", function (e) {
+      if (e.target === this) {
+        this.style.display = "none";
+        document.getElementById("modal-iframe").src = "";
+      }
+    });
+
+      /////////////////////////////////////////////////////////
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+            }
+          });
+        },
+        {
+          threshold: 0.5,
+        }
+      );
+
+      document.querySelectorAll(".fade-in-on-scroll").forEach((el) => {
+        observer.observe(el);
+      });
+      ///////////////////////////////////////////////////////
+    </script>
+
+  </body>
+</html>
